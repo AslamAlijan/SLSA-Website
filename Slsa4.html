@@ -1,0 +1,1318 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Sindh Law Students Alliance - United for Students, Justice and Progress."><title>Sindh Law Students Alliance | SLSA</title><style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:#222;
+    background:#fff;
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+}
+
+
+/* ================= NAVBAR ================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(255,255,255,.98);
+    box-shadow:0 3px 20px rgba(0,0,0,.08);
+}
+
+.navbar{
+    min-height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-area img{
+    width:52px;
+    height:52px;
+    object-fit:contain;
+    border-radius:50%;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-text strong{
+    font-size:21px;
+    color:#0b3d2e;
+}
+
+.logo-text span{
+    font-size:9px;
+    color:#777;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:23px;
+    list-style:none;
+}
+
+.nav-links a{
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#c9a227;
+}
+
+.join-btn{
+    background:#0b3d2e;
+    color:#fff!important;
+    padding:10px 18px;
+    border-radius:7px;
+}
+
+.join-btn:hover{
+    background:#c9a227;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    color:#0b3d2e;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    padding-top:75px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(135deg,#06291f,#0b3d2e);
+}
+
+.hero::before{
+    content:"⚖";
+    position:absolute;
+    right:7%;
+    bottom:-60px;
+    font-size:330px;
+    color:rgba(255,255,255,.035);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:800px;
+}
+
+.hero-small{
+    color:#c9a227;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    color:#fff;
+    font-family:Georgia,serif;
+    font-size:clamp(45px,7vw,78px);
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#c9a227;
+}
+
+.hero p{
+    max-width:650px;
+    color:rgba(255,255,255,.78);
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 24px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.primary{
+    background:#c9a227;
+    color:#fff;
+}
+
+.secondary{
+    border:1px solid rgba(255,255,255,.5);
+    color:#fff;
+}
+
+.secondary:hover{
+    background:#fff;
+    color:#0b3d2e;
+}
+
+
+/* ================= STATS ================= */
+
+.stats{
+    background:#0b3d2e;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+    text-align:center;
+    padding:30px 15px;
+    border-right:1px solid rgba(255,255,255,.1);
+}
+
+.stat:last-child{
+    border-right:none;
+}
+
+.stat h3{
+    color:#c9a227;
+    font-size:32px;
+}
+
+.stat p{
+    color:rgba(255,255,255,.7);
+    font-size:13px;
+}
+
+
+/* ================= GENERAL ================= */
+
+section{
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 50px;
+}
+
+.section-title small{
+    color:#c9a227;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.section-title h2{
+    font-family:Georgia,serif;
+    font-size:45px;
+    color:#0b3d2e;
+    margin:12px 0;
+}
+
+.section-title h2 span{
+    color:#c9a227;
+}
+
+.section-title p{
+    color:#777;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.about-image{
+    min-height:420px;
+    border-radius:20px;
+    background:#f1f5f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    overflow:hidden;
+}
+
+.about-image img{
+    width:65%;
+    max-height:380px;
+    object-fit:contain;
+}
+
+.about-content h2{
+    font-family:Georgia,serif;
+    color:#0b3d2e;
+    font-size:42px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.about-content h2 span{
+    color:#c9a227;
+}
+
+.about-content p{
+    color:#777;
+    margin-bottom:18px;
+}
+
+.values{
+    margin-top:30px;
+    display:grid;
+    gap:15px;
+}
+
+.value{
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.value-icon{
+    width:45px;
+    height:45px;
+    display:grid;
+    place-items:center;
+    border-radius:10px;
+    background:rgba(201,162,39,.12);
+    color:#c9a227;
+    font-size:21px;
+    flex-shrink:0;
+}
+
+.value h4{
+    color:#0b3d2e;
+}
+
+.value p{
+    margin:0;
+    font-size:13px;
+}
+
+
+/* ================= LEADERSHIP ================= */
+
+.leadership{
+    background:#f7f8f6;
+}
+
+.leaders{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.leader-card{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.leader-card:hover{
+    transform:translateY(-6px);
+}
+
+.leader-photo{
+    height:330px;
+    background:#e8eee9;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.leader-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.leader-info{
+    padding:22px;
+}
+
+.leader-info small{
+    color:#c9a227;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.leader-info h3{
+    color:#0b3d2e;
+    font-family:Georgia,serif;
+    font-size:23px;
+    margin:5px 0;
+}
+
+.leader-info p{
+    color:#777;
+    font-size:13px;
+}
+
+
+/* ================= MEMBERSHIP ================= */
+
+.membership{
+    background:#fff;
+}
+
+.form-box{
+    max-width:850px;
+    margin:auto;
+    background:#fff;
+    padding:40px;
+    border-radius:18px;
+    box-shadow:0 15px 50px rgba(0,0,0,.09);
+    border:1px solid #eee;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+
+.form-group.full{
+    grid-column:1/-1;
+}
+
+.form-group label{
+    font-size:13px;
+    font-weight:bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:13px;
+    border:1px solid #ddd;
+    border-radius:7px;
+    outline:none;
+    transition:.3s;
+    font-family:inherit;
+    font-size:14px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:#0b3d2e;
+    box-shadow:0 0 0 3px rgba(11,61,46,.08);
+}
+
+.form-group textarea{
+    resize:vertical;
+}
+
+.declaration{
+    margin:25px 0;
+    font-size:13px;
+    color:#777;
+}
+
+.declaration label{
+    display:flex;
+    gap:10px;
+}
+
+.declaration input{
+    margin-top:5px;
+}
+
+.submit{
+    width:100%;
+    border:none;
+    background:#0b3d2e;
+    color:#fff;
+    padding:15px;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+    font-size:15px;
+}
+
+.submit:hover{
+    background:#c9a227;
+}
+
+.submit:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+}
+
+#message{
+    margin-top:18px;
+    text-align:center;
+    font-weight:bold;
+}
+
+
+/* ================= NEWS ================= */
+
+.news{
+    background:#f7f8f6;
+}
+
+.news-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.news-card{
+    background:#fff;
+    padding:25px;
+    border-radius:14px;
+    border:1px solid #eee;
+    transition:.3s;
+}
+
+.news-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,.07);
+}
+
+.news-card small{
+    color:#c9a227;
+    font-weight:bold;
+}
+
+.news-card h3{
+    color:#0b3d2e;
+    margin:8px 0;
+}
+
+.news-card p{
+    color:#777;
+    font-size:13px;
+}
+
+
+/* ================= GALLERY ================= */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.gallery-item{
+    height:240px;
+    background:#e8eee9;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.05);
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:#0b3d2e;
+    color:#fff;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.contact h2{
+    font-family:Georgia,serif;
+    font-size:48px;
+    line-height:1.2;
+}
+
+.contact h2 span{
+    color:#c9a227;
+}
+
+.contact p{
+    color:rgba(255,255,255,.7);
+    margin-top:20px;
+}
+
+.contact-info{
+    display:grid;
+    gap:15px;
+}
+
+.contact-item{
+    padding:18px;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:10px;
+}
+
+.contact-item small{
+    color:rgba(255,255,255,.5);
+}
+
+.contact-item strong{
+    display:block;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#041c15;
+    color:#fff;
+}
+
+.footer-main{
+    padding:40px 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.footer-main p{
+    color:rgba(255,255,255,.5);
+    font-size:12px;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.08);
+    text-align:center;
+    padding:18px;
+    color:rgba(255,255,255,.4);
+    font-size:11px;
+}
+
+
+/* ================= TABLET ================= */
+
+@media(max-width:850px){
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:75px;
+        left:0;
+        width:100%;
+        background:#fff;
+        flex-direction:column;
+        padding:15px 25px;
+        gap:0;
+        box-shadow:0 10px 20px rgba(0,0,0,.08);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links li{
+        width:100%;
+        border-bottom:1px solid #eee;
+    }
+
+    .nav-links a{
+        display:block;
+        padding:12px;
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .leaders,
+    .news-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+    .container{
+        width:92%;
+    }
+
+    .logo-area img{
+        width:45px;
+        height:45px;
+    }
+
+    .logo-text strong{
+        font-size:18px;
+    }
+
+    .logo-text span{
+        font-size:8px;
+    }
+
+    .hero h1{
+        font-size:44px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    section{
+        padding:75px 0;
+    }
+
+    .section-title h2{
+        font-size:35px;
+    }
+
+    .about-content h2{
+        font-size:35px;
+    }
+
+    .leaders,
+    .news-grid,
+    .form-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-group.full{
+        grid-column:auto;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item{
+        height:260px;
+    }
+
+    .form-box{
+        padding:22px;
+    }
+
+    .footer-main{
+        flex-direction:column;
+        text-align:center;
+        gap:15px;
+    }
+
+    .hero::before{
+        font-size:220px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+}
+
+</style></head><body><!-- ================= NAVBAR ================= --><header><nav class="navbar container"><a href="#home" class="logo-area"><img
+src="SLSA.png"
+alt="SLSA Logo">
+
+<div class="logo-text">
+<strong>SLSA</strong>
+<span>Sindh Law Students Alliance</span>
+</div></a><button
+class="menu-btn"
+id="menuBtn"
+aria-label="Open Menu">
+
+☰
+
+</button><ul class="nav-links" id="navLinks"><li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#leadership">Leadership</a></li>
+<li><a href="#membership">Membership</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li><li>
+<a href="#membership" class="join-btn">
+Join SLSA
+</a>
+</li></ul></nav></header><!-- ================= HERO ================= --><section class="hero" id="home"><div class="container hero-content"><div class="hero-small">
+SINDH LAW STUDENTS ALLIANCE
+</div><h1>
+United for Students,
+<span>Justice & Progress.</span>
+</h1><p>
+A united platform for law students of Sindh,
+working for education, representation, rights
+and a better future.
+</p><div class="buttons"><a href="#membership" class="btn primary">
+Become a Member →
+</a><a href="#about" class="btn secondary">
+Discover SLSA
+</a></div></div></section><!-- ================= STATS ================= --><div class="stats"><div class="container stats-grid"><div class="stat">
+<h3>100+</h3>
+<p>Members</p>
+</div><div class="stat">
+<h3>20+</h3>
+<p>Law Colleges</p>
+</div><div class="stat">
+<h3>10+</h3>
+<p>Districts</p>
+</div><div class="stat">
+<h3>01</h3>
+<p>United Voice</p>
+</div></div></div><!-- ================= ABOUT ================= --><section id="about"><div class="container about-grid"><div class="about-image"><img
+src="slsa2.png"
+alt="Sindh Law Students Alliance Logo">
+
+</div><div class="about-content"><div
+class="section-title"
+style="text-align:left;margin:0 0 20px;"><small>WHO WE ARE</small>
+
+</div><h2>
+Empowering the next generation of
+<span>legal professionals.</span>
+</h2><p>
+Sindh Law Students Alliance (SLSA) is a platform
+created to bring law students together and provide
+a collective voice for their academic and
+professional concerns.
+</p><p>
+We believe that unity, knowledge and responsible
+leadership can create meaningful opportunities
+for law students across Sindh.
+</p><div class="values"><div class="value"><div class="value-icon">⚖</div><div><h4>Justice</h4><p>
+Promoting awareness of law and justice.
+</p></div></div><div class="value"><div class="value-icon">🤝</div><div><h4>Unity</h4><p>
+Connecting law students across Sindh.
+</p></div></div><div class="value"><div class="value-icon">🎓</div><div><h4>Education</h4><p>
+Supporting academic growth and opportunities.
+</p></div></div></div></div></div></section><!-- ================= LEADERSHIP ================= --><section
+class="leadership"
+id="leadership"><div class="container"><div class="section-title"><small>LEADERSHIP</small>
+
+<h2>
+Meet Our
+<span>Executive Body</span>
+</h2><p>
+Dedicated students working for the collective
+interests of law students.
+</p></div><div class="leaders"><!-- PRESIDENT --><div class="leader-card"><div class="leader-photo"><img
+src="./images/president.jpg"
+alt="SLSA President">
+
+</div><div class="leader-info"><small>President</small>
+
+<h3>President Name</h3><p>
+President, Sindh Law Students Alliance
+</p></div></div><!-- VICE PRESIDENT --><div class="leader-card"><div class="leader-photo"><img
+src="./images/vice-president.jpg"
+alt="vice-president">
+
+</div><div class="leader-info"><small>Vice President</small>
+
+<h3>M. Aslam Katohar</h3><p>
+Vice President, SLSA
+</p></div></div><!-- GENERAL SECRETARY --><div class="leader-card"><div class="leader-photo"><img
+src="./images/secretary.jpg"
+alt="General Secretary">
+
+</div><div class="leader-info"><small>General Secretary</small>
+
+<h3>General Secretary Name</h3><p>
+General Secretary, SLSA
+</p></div></div></div></div></section><!-- ================= MEMBERSHIP ================= --><section
+class="membership"
+id="membership"><div class="container"><div class="section-title"><small>MEMBERSHIP</small>
+
+<h2>
+Join <span>SLSA</span>
+</h2><p>
+Become part of a growing community of law students
+across Sindh.
+</p></div><div class="form-box"><form
+id="membershipForm"
+action="https://formspree.io/f/mnpqpjoa"
+method="POST"><div class="form-grid"><div class="form-group"><label>Full Name *</label>
+
+<input
+type="text"
+name="Full Name"
+placeholder="Enter your full name"
+required>
+
+</div><div class="form-group"><label>Father's Name *</label>
+
+<input
+type="text"
+name="Father's Name"
+placeholder="Enter father's name"
+required>
+
+</div><div class="form-group"><label>Student ID / Roll No.</label>
+
+<input
+type="text"
+name="Student ID / Roll No."
+placeholder="Enter student ID or roll number">
+
+</div><div class="form-group"><label>College / University *</label>
+
+<input
+type="text"
+name="College / University"
+placeholder="Enter college/university"
+required>
+
+</div><div class="form-group"><label>Semester / Year *</label>
+
+<select
+name="Semester / Year"
+required>
+
+<option value="">
+Select Semester
+</option><option>1st Semester</option>
+<option>2nd Semester</option>
+<option>3rd Semester</option>
+<option>4th Semester</option>
+<option>5th Semester</option>
+<option>6th Semester</option>
+<option>7th Semester</option>
+<option>8th Semester</option><option>LLB Part-I</option>
+<option>LLB Part-II</option>
+<option>LLB Part-III</option></select></div><div class="form-group"><label>District *</label>
+
+<input
+type="text"
+name="District"
+placeholder="Enter district"
+required>
+
+</div><div class="form-group"><label>Phone Number *</label>
+
+<input
+type="tel"
+name="Phone Number"
+placeholder="03XX XXXXXXX"
+required>
+
+</div><div class="form-group"><label>Email Address</label>
+
+<input
+type="email"
+name="Member Email"
+placeholder="example@email.com">
+
+</div><div class="form-group full"><label>Address *</label>
+
+<textarea
+name="Address"
+rows="4"
+placeholder="Enter your complete address"
+required></textarea></div></div><input
+type="hidden"
+name="_subject"
+value="New SLSA Membership Application">
+
+<div class="declaration"><label><input
+type="checkbox"
+name="Declaration"
+value="Agreed"
+required>
+
+<span>
+I confirm that the information provided above
+is correct and I agree to follow the rules and
+objectives of SLSA.
+</span></label></div><button
+type="submit"
+class="submit">
+
+Submit Membership Application →
+
+</button><div id="message"></div></form></div></div></section><!-- ================= NEWS ================= --><section
+class="news"
+id="news"><div class="container"><div class="section-title"><small>UPDATES</small>
+
+<h2>
+Latest <span>Announcements</span>
+</h2></div><div class="news-grid"><div class="news-card"><small>ANNOUNCEMENT</small>
+
+<h3>
+SLSA Membership Registration
+</h3><p>
+Law students can submit their membership
+applications through our online registration form.
+</p></div><div class="news-card"><small>EVENT</small>
+
+<h3>
+Students' Meeting
+</h3><p>
+Important updates regarding student welfare
+and organizational activities.
+</p></div><div class="news-card"><small>SLSA</small>
+
+<h3>
+Building a Stronger Community
+</h3><p>
+Together we can create opportunities,
+awareness and positive change.
+</p></div></div></div></section><!-- ================= GALLERY ================= --><section id="gallery"><div class="container"><div class="section-title"><small>OUR MOMENTS</small>
+
+<h2>
+SLSA <span>Gallery</span>
+</h2><p>
+Moments from our meetings, activities and events.
+</p></div><div class="gallery-grid"><div class="gallery-item"><img
+src="gallery1.png"
+alt="SLSA Gallery 1">
+
+</div><div class="gallery-item"><img
+src="gallery2.png"
+alt="SLSA Gallery 2">
+
+</div><div class="gallery-item"><img
+src="gallery3.png"
+alt="SLSA Gallery 3">
+
+</div><div class="gallery-item"><img
+src="gallery4.png"
+alt="SLSA Gallery 4">
+
+</div></div></div></section><!-- ================= CONTACT ================= --><section
+class="contact"
+id="contact"><div class="container contact-grid"><div><div
+class="section-title"
+style="text-align:left;margin:0;"><small>GET IN TOUCH</small>
+
+</div><h2>
+Let's build the future
+<span>together.</span>
+</h2><p>
+Have a question, suggestion or want to work with us?
+Get in touch with the Sindh Law Students Alliance.
+</p></div><div class="contact-info"><div class="contact-item"><small>EMAIL</small>
+
+<strong>
+aslamalijan8@gmail.com
+</strong></div><div class="contact-item"><small>LOCATION</small>
+
+<strong>
+Sindh, Pakistan
+</strong></div><div class="contact-item"><small>ORGANIZATION</small>
+
+<strong>
+Sindh Law Students Alliance
+</strong></div></div></div></section><!-- ================= FOOTER ================= --><footer><div class="container footer-main"><div><strong>
+Sindh Law Students Alliance
+</strong><p>
+United for Students, Justice & Progress.
+</p></div><div><p>
+© <span id="year"></span>
+SLSA. All Rights Reserved.
+</p></div></div><div class="footer-bottom">
+Designed for SLSA ⚖
+</div></footer><!-- ================= JAVASCRIPT ================= --><script>
+
+
+/* ================= MOBILE MENU ================= */
+
+const menuBtn =
+document.getElementById("menuBtn");
+
+const navLinks =
+document.getElementById("navLinks");
+
+
+menuBtn.addEventListener("click",function(){
+
+navLinks.classList.toggle("active");
+
+});
+
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+link.addEventListener("click",function(){
+
+navLinks.classList.remove("active");
+
+});
+
+});
+
+
+
+/* ================= CURRENT YEAR ================= */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+
+/* ================= IMAGE CHECK ================= */
+
+/*
+IMPORTANT:
+
+All images must be inside:
+
+images/
+
+Files:
+
+logo.png
+president.jpg
+vice-president.jpg
+secretary.jpg
+gallery1.jpg
+gallery2.jpg
+gallery3.jpg
+gallery4.jpg
+*/
+
+
+const images =
+document.querySelectorAll("img");
+
+
+images.forEach(function(img){
+
+img.addEventListener("error",function(){
+
+console.warn(
+"Image not found:",
+img.getAttribute("src")
+);
+
+});
+
+});
+
+
+
+/* ================= FORMSPREE ================= */
+
+const form =
+document.getElementById("membershipForm");
+
+const message =
+document.getElementById("message");
+
+
+form.addEventListener(
+"submit",
+async function(event){
+
+event.preventDefault();
+
+
+const submitButton =
+form.querySelector(".submit");
+
+
+submitButton.disabled = true;
+
+submitButton.textContent =
+"Submitting...";
+
+
+message.textContent = "";
+
+
+const formData =
+new FormData(form);
+
+
+try{
+
+
+const response =
+await fetch(
+form.action,
+{
+method:"POST",
+body:formData,
+headers:{
+"Accept":
+"application/json"
+}
+}
+);
+
+
+if(response.ok){
+
+message.innerHTML =
+"✅ <strong>Registration Successful!</strong><br>" +
+"Your membership application has been sent successfully.";
+
+message.style.color =
+"#0b7a4b";
+
+form.reset();
+
+}
+
+else{
+
+let data = {};
+
+try{
+
+data =
+await response.json();
+
+}catch(error){
+
+data = {};
+
+}
+
+
+if(data.errors){
+
+message.textContent =
+data.errors
+.map(
+error =>
+error.message
+)
+.join(", ");
+
+}
+
+else{
+
+message.textContent =
+"❌ Something went wrong. Please try again.";
+
+}
+
+message.style.color =
+"#b42318";
+
+}
+
+
+}
+
+catch(error){
+
+console.error(error);
+
+message.textContent =
+"❌ Unable to submit application. " +
+"Please check your internet connection and try again.";
+
+message.style.color =
+"#b42318";
+
+}
+
+
+submitButton.disabled = false;
+
+submitButton.textContent =
+"Submit Membership Application →";
+
+});
+
+</script></body>
+</html>
