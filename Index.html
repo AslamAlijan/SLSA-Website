@@ -2304,6 +2304,79 @@ issueForm.addEventListener("submit", async function(event) {
 });
 
 </script>
+<!-- =========================
+     REPORT AN ISSUE BUTTON
+========================= -->
 
+<button type="button" class="issue-btn" onclick="openIssuePopup()">
+    🔔 Report an Issue
+</button>
+
+<!-- =========================
+     REPORT ISSUE POPUP
+========================= -->
+
+<div class="issue-overlay" id="issuePopup">
+
+    <div class="issue-box">
+
+        <span class="issue-close" onclick="closeIssuePopup()">
+            &times;
+        </span>
+
+        <h2>Submit Your Issue</h2>
+
+        <p>
+            If any member has any concerns or issues regarding any matter,
+            please mention them here and send them to us.
+        </p>
+
+        <form
+            id="issueForm"
+            action="https://formspree.io/f/xqpkqlzq"
+            method="POST"
+        >
+
+            <input
+                type="text"
+                name="Name"
+                placeholder="Enter your name"
+                required
+            >
+
+            <input
+                type="email"
+                name="Email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <textarea
+                name="Issue"
+                rows="6"
+                placeholder="Write your issue here..."
+                required
+            ></textarea>
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="New SLSA Issue / Concern"
+            >
+
+            <button
+                type="submit"
+                class="issue-submit"
+            >
+                Submit Issue
+            </button>
+
+            <div id="issueMessage"></div>
+
+        </form>
+
+    </div>
+
+</div>
 </body>
     </html>
